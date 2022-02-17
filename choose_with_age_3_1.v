@@ -1,4 +1,4 @@
-module choose_one_with_age_3_1
+module choose_with_age_3_1
 (
   input  [2:0] in_vld,
   input  [4:0] in_age [2:0],   //small age with higher priority

@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------------------
 //根据队列指针ptr的位置，得到队列里面满足条件的slot位置
 //---------------------------------------------------------------------------------------
-module ptr_2_bitvec (ptr, ge_ptr_vec, gt_ptr_vec, lt_ptr_vec, le_ptr_vec);
+module ptr_compare_6_64 (ptr, ge_ptr_vec, gt_ptr_vec, lt_ptr_vec, le_ptr_vec);
    input [5:0] ptr;
    output [63:0] ge_ptr_vec;
    output [63:0] gt_ptr_vec;
@@ -25,7 +25,7 @@ endmodule
 // 63----(in_ptr----)cur_ptr--------0    (flush > cur_ptr 且 flush <= in_ptr)
 //(63-------)cur_ptr-----(in_ptr----0)   (flush > cur_ptr 或 flush <= in_ptr)
 //---------------------------------------------------------------------------------------
-module (in_ptr, cur_ptr, br_flush_vec);
+module queue_flush_64 (in_ptr, cur_ptr, br_flush_vec);
    input [5:0] in_ptr;
    input [5:0] cur_ptr;
    output [63:0] br_flush_vec;
